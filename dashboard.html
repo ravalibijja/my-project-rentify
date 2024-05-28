@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rentify - Dashboard</title>
+</head>
+<body>
+    <h1>Dashboard</h1>
+    <h2>Available Properties</h2>
+    <ul>
+        {% for property in properties %}
+        <li>{{ property.location }} - {{ property.area }} sqft</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('list_property') }}">List a Property</a>
+</body>
+</html>
